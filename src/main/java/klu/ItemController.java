@@ -12,7 +12,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@RestController("/backend/items")
+@RestController
+@RequestMapping("/backend/items")
+
 @CrossOrigin(origins = "http://localhost:5173")
 public class ItemController {
 
