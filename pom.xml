@@ -9,7 +9,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <groupId>library</groupId>
@@ -62,7 +62,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Servlet container -->
+        <!-- Provided Tomcat (for external container) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -78,13 +78,15 @@
     </dependencies>
 
     <build>
+        <finalName>library</finalName>
         <plugins>
+            <!-- Use war plugin instead of repackage -->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
                 <configuration>
-                    <!-- Specify your main class -->
-                    <mainClass>klu.ProjectApplication</mainClass>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
         </plugins>
