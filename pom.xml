@@ -70,14 +70,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- Custom / External dependency -->
-        <!-- ⚠️ Make sure EX-MS-CLIENT-1 is installed or available in a repo -->
-        <dependency>
-            <groupId>klu</groupId>
-            <artifactId>EX-MS-CLIENT-1</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
